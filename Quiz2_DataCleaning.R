@@ -1,7 +1,6 @@
 #####################################################################
-# 
+
 # Question 1
-#
 
 library(httr)
 
@@ -37,9 +36,9 @@ dat2 <- dat1[8,]
 View(dat2)
 
 ############################################################################
-#
+
 # Question 2
-# 
+
 # Install SQL package
 install.packages("sqldf")
 library(sqldf)
@@ -65,10 +64,10 @@ test1 <- sqldf("select * from acs")
 head(test1)
 
 ################################################################# 
-#
+
 # Question 3
-#
-# The equivalent funcition to unique(acs$AGEP)
+
+# The equivalent function to unique(acs$AGEP)
 
 test0 <- unique(acs$AGEP)
 head(test0)
@@ -80,10 +79,10 @@ testD <- sqldf("select distinct pqgtp1 from acs")
 
 #################################################################
 # Question 4
-#
+
 # How many characters are in the 10th, 20th, 30th and 100th lines of HTML from 
 # this page: http://biostat.jhsph.edu/~jleek/contact.html
-#
+
 # Open the connection
 con = url("http://biostat.jhsph.edu/~jleek/contact.html")
 # read the lines
@@ -98,13 +97,14 @@ nzchar(htmlCode[c(10, 20, 30, 100)])
 close(con)
 
 ##################################################################
-# 
+
 # Question 5
-#
+
 # Read this data set 
 # (https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for) 
 # into R and report the sum of the numbers in the fourth of 
 # the nine columns 
+
 library(readr)
 
 fix1 <- read.fwf(
