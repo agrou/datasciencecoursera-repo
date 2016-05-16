@@ -30,23 +30,7 @@ splitNames <- strsplit(Idat, " ")
 splitNames[[123]]
 
 
-#############
-
-wgtplist <- select(Idat, wgtp1:wgtp80)
-head(wgtplist)
-names1 <- names(wgtplist)
-
-Idat2 <- gsub(("[[:alpha:]]"), names1, ",", "\\1_")
-strsplit(Idat2, ",")
-head(Idat2)
-
-g1 <- gsub("([[:alpha:]]+)", ",", names1)
-head(g1)
-strsplit(g1, ",") [123] 
-
-##################
-
-l## Question 2
+## Question 2
 
 # Load the Gross Domestic Product data for the 190 ranked countries in this 
 # data set: https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv
@@ -67,6 +51,8 @@ GDPdat$V5 <- as.numeric(GDPdat$V5)
 class(GDPdat$V5)
 mean(GDPdat$V5)
 
+## Question 3
+
 # In the data set from Question 2 what is a regular expression that would allow
 # to count the number of countries whose name begins with "United"?
 # Assume that the variable with the country names in it is named countryNames.
@@ -81,6 +67,8 @@ tbl_df(GDPdat1)
 library(dplyr)
 
 length(grep("^United", GDPdat1$countryNames))
+
+## Question 4
 
 # Load the Gross Domestic Product data for the 190 ranked countries in this 
 # data set:  https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv
